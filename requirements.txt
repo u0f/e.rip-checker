@@ -1,0 +1,5 @@
+requests
+platform
+os
+threading
+simple_chalk
