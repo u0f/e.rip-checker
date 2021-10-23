@@ -37,13 +37,13 @@ print(chalk.yellow(mystring))
 
 def program():
 	
-	file_exits = os.path.exists("list.txt")
+	file_exits = os.path.exists("src/list.txt")
 	if file_exits == False:
-		list = open("list.txt", "w")
+		list = open("src/list.txt", "w")
 		print(chalk.red("Reboot the program and add your URL's to check into list.txt file"))
 	elif file_exits == True:
-		list = open("list.txt", "r")
-	disponibles = open("available.txt", "w")
+		list = open("src/list.txt", "r")
+	disponibles = open("src/available.txt", "w")
 
 	selection = input(chalk.yellow("\nSelect a option: "))
 
@@ -67,6 +67,10 @@ def program():
 		for i in list:
 			i = i.strip()
 			print(i)
+		program()
+	
+	else:
+		print(chalk.red(chalk.bold("\n\nSelect a correct option [X]")))
 		program()
 
 	input("")	
